@@ -12,7 +12,7 @@ const refs = {
   galleryRef: document.querySelector('.gallery'),
   loadMoreRef: document.querySelector('[type="button"]'),
 };
-console.log();
+//console.log();
 // console.log(refs.buttonRef);
 // console.log(refs.galleryRef);
 const api = new ApiService();
@@ -44,6 +44,7 @@ function onButtonPress(e) {
     .then(render)
     .then(marking => {
       if (marking == '') {
+        refs.loadMoreRef.disabled = true;
         Notiflix.Notify.warning(
           'Sorry, there are no images matching your search query. Please try again.'
         );
@@ -51,7 +52,7 @@ function onButtonPress(e) {
       clearGalery();
       refs.galleryRef.insertAdjacentHTML('beforeend', marking);
     });
-  api.fetchArticles().then(console.log);
+  //api.fetchArticles().then(console.log);
 }
 
 function clearGalery() {
