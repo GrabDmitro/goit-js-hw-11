@@ -33,7 +33,7 @@ function onLoadMore(e) {
 function onButtonPress(e) {
   e.preventDefault();
   if (api.query === refs.inputRef.firstElementChild.value) {
-    console.log('ok');
+    //console.log('ok');
     return;
   }
   refs.loadMoreRef.disabled = false;
