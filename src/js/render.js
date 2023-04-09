@@ -1,5 +1,5 @@
 export default function render(responce) {
-  data = responce.data.hits;
+  const data = responce.data.hits;
   // console.log(data);
   return data
     .map(elem => {
